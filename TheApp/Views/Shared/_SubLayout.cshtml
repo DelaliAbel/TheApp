@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TheApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TheApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="row p-0 bg-body m-0">
+
+    <div class="col-md-3 bg-gradient" style="width:200px">
+        <div class="bg-primary sticky-top" style="height:24vh">
+            Hello texts
+        </div>
+    </div>
+    <div class="col-9 row p-0 m-0"><div>
+            <header>
+                <nav class="" style="background-color:red; height: 10vh">
+                </nav>
+            </header>
+            <div class="">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+    </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - TheApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

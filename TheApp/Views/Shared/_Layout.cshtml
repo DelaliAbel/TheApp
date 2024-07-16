@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - TheApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TheApp.styles.css" asp-append-version="true"/>
+</head>
+
+<body>
+    <div class="row p-0 bg-body m-0">
+        <div class="col-md-2 bg-gradient" style="width:200px">
+            <div class="bg-primary sticky-top" style="height:24vh">
+                Hello texts
+            </div>
+        </div>
+        <div class="col-10 row p-0 m-0">
+            <header class="sticky-top" style="background-color:green; height: 10vh; padding:0px">
+
+                @*            <nav class="" style="background-color:aqua; height: 10vh; z-index:0">
+                <div>
+                <a>Product</a>
+                </div>
+                <div>
+                <a>Client</a>
+                </div>
+                <div>
+                <a>Stock</a>
+                </div>
+                <div>
+                <a>Command</a>
+                </div>
+                <div>
+                <a>Command2</a>
+                </div>
+                </nav>
+                *@
+            </header>
+            <div style="background-color:antiquewhite; z-index:0; padding:0px">
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+
+@*        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2023 - TheApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+*@
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
